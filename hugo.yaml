@@ -1,0 +1,109 @@
+# Deployed at https://flameberry.github.io/blog/ — the trailing slash matters
+# for a GitHub Pages *project* site, since all assets resolve under /blog/.
+baseURL: "https://flameberry.github.io/blog/"
+title: Flameberry Blog
+
+enableRobotsTXT: true
+# Powers "last updated" stamps from commit dates.
+enableGitInfo: true
+enableEmoji: true
+
+hasCJKLanguage: false
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+  imports:
+    - path: github.com/imfing/hextra
+
+defaultContentLanguage: en
+languages:
+  en:
+    label: English
+    locale: en-US
+    weight: 1
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+markup:
+  goldmark:
+    renderer:
+      # Needed for raw HTML in Markdown and some Hextra shortcodes.
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    lineNos: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    - name: Tags
+      pageRef: /tags
+      weight: 2
+    - name: About
+      pageRef: /about
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/flameberry"
+      params:
+        icon: github
+
+params:
+  description: "Notes on graphics, engines and systems programming."
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+
+  page:
+    width: normal
+
+  # Off by default: flip `enable` to true once the repo is public.
+  editURL:
+    enable: false
+    base: "https://github.com/flameberry/blog/edit/main/content"
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
