@@ -1,4 +1,4 @@
-# Flameberry Blog
+# Aditya's Talk no Jutsu
 
 Hugo + [Hextra](https://imfing.github.io/hextra/), deployed to
 <https://flameberry.github.io/blog/> by GitHub Actions on every push to `main`.

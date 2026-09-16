@@ -1,11 +1,12 @@
 ---
+title: "Aditya's Talk no Jutsu"
 # hextra-home drops the sidebar placeholder and TOC columns that the default
 # home layout reserves, so the content starts at the left edge of the page.
 layout: hextra-home
 ---
 
 {{< hextra/hero-headline >}}
-  Flameberry Blog
+  Aditya's Talk no Jutsu
 {{< /hextra/hero-headline >}}
 
 <div class="hx:mb-6"></div>

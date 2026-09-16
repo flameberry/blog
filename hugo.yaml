@@ -1,7 +1,7 @@
 # Deployed at https://flameberry.github.io/blog/ — the trailing slash matters
 # for a GitHub Pages *project* site, since all assets resolve under /blog/.
 baseURL: "https://flameberry.github.io/blog/"
-title: Flameberry Blog
+title: "Aditya's Talk no Jutsu"
 
 enableRobotsTXT: true
 # Powers "last updated" stamps from commit dates.
